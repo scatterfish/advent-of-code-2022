@@ -1,0 +1,6 @@
+calories = File.read("input.txt").split("\n\n").map(&.split.map(&.to_i).sum)
+
+sorted = calories.sort.reverse
+
+puts "Part 1 answer: #{sorted.first}"
+puts "Part 2 answer: #{sorted[0..2].sum}"
