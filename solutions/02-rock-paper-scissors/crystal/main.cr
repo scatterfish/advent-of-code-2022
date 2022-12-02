@@ -47,5 +47,9 @@ def win_score(a, b)
 	return 0
 end
 
-puts "Part 1 answer: #{guide.map { |(a, b)| score(a, b)   }.sum}"
-puts "Part 2 answer: #{guide.map { |(a, b)| score_2(a, b) }.sum}"
+macro total_score(scoring)
+	guide.map { |(a, b)| {{scoring}}(a, b) }.sum
+end
+
+puts "Part 1 answer: #{total_score(score)}"
+puts "Part 2 answer: #{total_score(score_2)}"
