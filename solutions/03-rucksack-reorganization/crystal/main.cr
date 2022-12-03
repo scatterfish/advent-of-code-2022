@@ -9,7 +9,7 @@ def intersect(sets)
 end
 
 def priority(items)
-	items.map { |item| PRIORITY_MAP[item] }.sum
+	items.sum { |item| PRIORITY_MAP[item] }
 end
 
 priority_items = rucksacks.map { |rucksack|

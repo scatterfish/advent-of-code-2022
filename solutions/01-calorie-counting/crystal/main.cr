@@ -1,4 +1,4 @@
-calories = File.read("input.txt").split("\n\n").map(&.split.map(&.to_i).sum)
+calories = File.read("input.txt").split("\n\n").map(&.split.sum(&.to_i))
 
 sorted = calories.sort.reverse
 

@@ -48,7 +48,7 @@ def win_score(a, b)
 end
 
 macro total_score(scoring)
-	guide.map { |(a, b)| {{scoring}}(a, b) }.sum
+	guide.sum { |(a, b)| {{scoring}}(a, b) }
 end
 
 puts "Part 1 answer: #{total_score(score)}"
